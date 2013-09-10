@@ -15,7 +15,7 @@ public class CakeOre extends BlockOre {
 		super(id);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(1.5F);
-		this.setLightValue(0.1F);
+		this.setLightValue(0.0F);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setUnlocalizedName("cakeOre");
 	}

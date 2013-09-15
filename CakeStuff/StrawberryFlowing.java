@@ -1,4 +1,4 @@
-package CakeStuff.mods.TeamL33T.CakeStuff;
+package CakeStuff.CakeStuff;
 
 import net.minecraft.block.BlockFlowing;
 import net.minecraft.block.material.Material;

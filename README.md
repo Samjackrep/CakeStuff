@@ -14,4 +14,6 @@ Next Version: 0.3.5
   Implementation of Baking Furnace GUI, doesn't bake any cakes (only Overbaked Cakes)
 - Cake Arrow (Preview)
   Inherits a normal arrow, only changes the texture as a public preview
+-CakeStuff Tab
+  Adds a Creative Tab with all items from this mod
 - Enjoy Coding!!!

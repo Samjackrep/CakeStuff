@@ -1,11 +1,10 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.mods.TeamL33T.CakeStuff;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockOre;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -21,27 +20,36 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class Main
 {
        public static final String modid = "CakeStuff";
-       // Main Blocks/Cakes
-       public static Block cakeOre;
-       public static Block cakeDark;
-       public static Block creamStrawberry;
-       // Items
-       public static Item cakeSword;
-       public static Item cakePickaxe;
-       public static Item cakeShovel;
-       public static Item cakeAxe;
-       public static Item cakeHoe;
-       // Miscellaneous
-       public static CakeOreGen cakeOreGen;
-       // Fluids
-       public static Block flowStrawberry;
-       public static Block stillStrawberry;
-       // EnumToolMaterials
+    // EnumToolMaterials
        public static EnumToolMaterial cakeSwordMaterial = EnumHelper.addToolMaterial("cakeSwordMaterial", 2, 200, 5F, 1F, 5);
        public static EnumToolMaterial cakePickaxeMaterial = EnumHelper.addToolMaterial("cakePickaxeMaterial", 3, 300, 6.25F, 0.5F, 5);
        public static EnumToolMaterial cakeShovelMaterial = EnumHelper.addToolMaterial("cakeShovelMaterial", 3, 350, 6.5F, 0.5F, 5);
        public static EnumToolMaterial cakeAxeMaterial = EnumHelper.addToolMaterial("cakeAxeMaterial", 3, 325, 6.25F, 0.5F, 5);
        public static EnumToolMaterial cakeHoeMaterial = EnumHelper.addToolMaterial("cakeHoeMaterial", 2, 200, 5F, 0.5F, 5);
+     //CreativeTab
+       public static CreativeTabs CakeStuffTab = new CreativeTabs("CakeStuff"){
+    	   public ItemStack getIconItemStack(){
+    		   return new ItemStack(cakeDark);
+    	   }
+    	   public String getTranslatedTabLabel() {
+    		   return "CakeStuff";
+    	   }
+       };
+       // Main Blocks/Cakes
+       public static Block cakeOre = new CakeOre(4020).setCreativeTab(CakeStuffTab);
+       public static Block cakeDark = new DarkCake(4050).setCreativeTab(CakeStuffTab);
+       public static Block creamStrawberry = new CreamStrawberry(4032).setCreativeTab(CakeStuffTab);
+       // Items
+       public static Item cakeSword = new CakeSword(4021, cakeSwordMaterial).setCreativeTab(CakeStuffTab);
+       public static Item cakePickaxe = new CakePickaxe(4022, cakePickaxeMaterial).setCreativeTab(CakeStuffTab);
+       public static Item cakeShovel = new CakeShovel(4024, cakeShovelMaterial).setCreativeTab(CakeStuffTab);
+       public static Item cakeAxe = new CakeAxe(4023, cakeAxeMaterial).setCreativeTab(CakeStuffTab);
+       public static Item cakeHoe = new CakeHoe(4025, cakeHoeMaterial).setCreativeTab(CakeStuffTab);
+       // Miscellaneous
+       public static CakeOreGen cakeOreGen;
+       // Fluids
+       public static Block flowStrawberry = new StrawberryFlowing(608).setCreativeTab(CakeStuffTab);
+       public static Block stillStrawberry;
        
        @EventHandler
        public void preInit(FMLPreInitializationEvent event)
@@ -52,18 +60,14 @@ public class Main
        @EventHandler
        public void load(FMLInitializationEvent event)
        {
+    	   //CreativeTab
+    	   LanguageRegistry.instance().addStringLocalization("itemGroup.tabTutorial", "en_US", "CakeStuff");
+    	   
     	   // ID Getter Class
     	   CakeStuffID id = new CakeStuffID();
     	   
     	   // Declare Cakestuff
-    	   creamStrawberry = new CreamStrawberry(id.StrawberryCream);
-    	   cakeDark = new DarkCake(id.DarkCake);
-    	   cakeOre = new CakeOre(id.CakeOre).func_111022_d("cakestuff:cake_ore");
-    	   cakeSword = new CakeSword(id.CakeSword, cakeSwordMaterial);
-    	   cakePickaxe = new CakePickaxe(id.CakePick, cakePickaxeMaterial);
-    	   cakeShovel = new CakeShovel(id.CakeShovel, cakeShovelMaterial);
-    	   cakeAxe = new CakeAxe(id.CakeAxe, cakeAxeMaterial);
-    	   cakeHoe = new CakeHoe(id.CakeHoe, cakeHoeMaterial);
+    	   cakeDark = new DarkCake(id.DarkCake).setCreativeTab(CakeStuffTab);
     	   cakeOreGen = new CakeOreGen();
     	   
     	   // Register Cake Stuff
@@ -115,5 +119,4 @@ public class Main
     		   "cc ", " s ", " s ", 'c', cake, 's', new ItemStack(Item.ingotIron)
     	   });
        }
-       
 }

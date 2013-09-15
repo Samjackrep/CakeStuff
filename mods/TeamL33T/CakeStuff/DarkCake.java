@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.mods.TeamL33T.CakeStuff;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -29,7 +29,6 @@ public class DarkCake extends Block
     {
         super(par1, Material.cake);
         this.setTickRandomly(true);
-        this.setCreativeTab(CreativeTabs.tabFood);
     }
     
     public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)

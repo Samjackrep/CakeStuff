@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.mods.TeamL33T.CakeStuff;
 
 import java.util.Random;
 
@@ -13,11 +13,11 @@ public class CakeOre extends BlockOre {
 
 	public CakeOre(int id) {
 		super(id);
-		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setHardness(1.5F);
 		this.setLightValue(0.0F);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setUnlocalizedName("cakeOre");
+		this.func_111022_d("cakestuff:cake_ore");
 	}
 
 	public int idDropped(int par1, Random random, int par2) {

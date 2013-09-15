@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.mods.TeamL33T.CakeStuff;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
@@ -8,7 +8,6 @@ public class CakeArmor extends ItemArmor {
 
 	public CakeArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 		super(par1, par2EnumArmorMaterial, par3, par4);
-		this.setCreativeTab(CreativeTabs.tabCombat);
 	}
 
 }

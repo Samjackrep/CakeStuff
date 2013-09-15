@@ -14,7 +14,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = Main.modid, name = "CakeStuff", version = "0.0.1")
+@Mod(modid = Main.modid, name = "CakeStuff", version = "0.3.5")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class Main

@@ -46,7 +46,7 @@ public class Main
        public static Item cakeAxe = new CakeAxe(4023, cakeAxeMaterial).setCreativeTab(CakeStuffTab);
        public static Item cakeHoe = new CakeHoe(4025, cakeHoeMaterial).setCreativeTab(CakeStuffTab);
        // Miscellaneous
-       public static CakeOreGen cakeOreGen;
+       public static CakeOreGen cakeOreGen = new CakeOreGen();
        // Fluids
        public static Block flowStrawberry = new StrawberryFlowing(608).setCreativeTab(CakeStuffTab);
        public static Block stillStrawberry;
@@ -66,10 +66,6 @@ public class Main
     	   // ID Getter Class
     	   CakeStuffID id = new CakeStuffID();
     	   
-    	   // Declare Cakestuff
-    	   cakeDark = new DarkCake(id.DarkCake).setCreativeTab(CakeStuffTab);
-    	   cakeOreGen = new CakeOreGen();
-    	   
     	   // Register Cake Stuff
     	   GameRegistry.registerBlock(creamStrawberry, "creamStrawberry");
     	   GameRegistry.registerBlock(cakeOre, "oreCake");
@@ -80,7 +76,9 @@ public class Main
     	   GameRegistry.registerItem(cakeAxe, "axeCake");
     	   GameRegistry.registerItem(cakeHoe, "hoeCake");
     	   GameRegistry.registerWorldGenerator(cakeOreGen);
-    	   //GameRegistry.registerBlock(flowStrawberry, "flowStrawberry");
+    	   GameRegistry.registerBlock(flowStrawberry, "flowStrawberry");
+    	   
+    	   //Language Registry
     	   LanguageRegistry.addName(cakeOre, "Cake Ore");
     	   LanguageRegistry.addName(cakeSword, "Cake Sword");
     	   LanguageRegistry.addName(cakePickaxe, "Cake Pickaxe");

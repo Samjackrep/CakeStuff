@@ -20,6 +20,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class Main
 {
        public static final String modid = "CakeStuff";
+       //Ore
        // EnumToolMaterials
        public static EnumToolMaterial cakeSwordMaterial = EnumHelper.addToolMaterial("cakeSwordMaterial", 2, 200, 5F, 1F, 5);
        public static EnumToolMaterial cakePickaxeMaterial = EnumHelper.addToolMaterial("cakePickaxeMaterial", 3, 300, 6.25F, 0.5F, 5);
@@ -37,7 +38,7 @@ public class Main
        public static Item cakeAxe = new CakeAxe(4023, cakeAxeMaterial);
        public static Item cakeHoe = new CakeHoe(4025, cakeHoeMaterial);
        // Miscellaneous
-       public static CakeOreGen cakeOreGen = new CakeOreGen();
+       CakeOreGen CakeOreGen = new CakeOreGen();
        
        @EventHandler
        public void preInit(FMLPreInitializationEvent event)
@@ -50,7 +51,7 @@ public class Main
        public void load(FMLInitializationEvent event)
        {
     	   // CreativeTab
-    	   LanguageRegistry.instance().addStringLocalization("itemGroup.tabTutorial", "en_US", "CakeStuff");
+    	   LanguageRegistry.instance().addStringLocalization("itemGroup.CreativeTabCakeStuff", "en_US", "CakeStuff");
     	   
     	   // ID Getter Class
     	   CakeStuffID id = new CakeStuffID();
@@ -64,7 +65,9 @@ public class Main
     	   GameRegistry.registerItem(cakeShovel, "shovelCake");
     	   GameRegistry.registerItem(cakeAxe, "axeCake");
     	   GameRegistry.registerItem(cakeHoe, "hoeCake");
-    	   GameRegistry.registerWorldGenerator(cakeOreGen);
+    	   
+    	   //Cake Ore Generator
+    	   GameRegistry.registerWorldGenerator(CakeOreGen);
     	   
     	   //Language Registry
     	   LanguageRegistry.addName(cakeOre, "Cake Ore");

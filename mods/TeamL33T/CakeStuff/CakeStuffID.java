@@ -1,4 +1,4 @@
-package CakeStuff.CakeStuff;
+package mods.TeamL33T.CakeStuff;
 
 public class CakeStuffID {
 	// IDs are 4020-4099

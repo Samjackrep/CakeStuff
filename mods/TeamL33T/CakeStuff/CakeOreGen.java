@@ -1,4 +1,4 @@
-package CakeStuff.CakeStuff;
+package mods.TeamL33T.CakeStuff;
 
 import java.util.Random;
 

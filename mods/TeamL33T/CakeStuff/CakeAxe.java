@@ -1,4 +1,4 @@
-package CakeStuff.CakeStuff;
+package mods.TeamL33T.CakeStuff;
 
 import java.util.Random;
 
@@ -19,6 +19,7 @@ public class CakeAxe extends ItemAxe {
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeAxe");
 		this.func_111206_d("cakestuff:cake_axe");
+		this.setCreativeTab(new CreativeTabCakeStuff());
 	}
 	
 }

@@ -1,4 +1,4 @@
-package CakeStuff.CakeStuff;
+package mods.TeamL33T.CakeStuff;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -15,6 +15,7 @@ public class CreamStrawberry extends Block {
 		super(par1, Material.rock);
 		this.setUnlocalizedName("creamStrawberry");
 		this.setStepSound(Block.soundSnowFootstep);
+		this.setCreativeTab(new CreativeTabCakeStuff());
 	}
 	
 	@Override

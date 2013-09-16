@@ -6,12 +6,12 @@ import net.minecraft.item.Item;
 public class CreativeTabCakeStuff extends CreativeTabs {
 
 	public CreativeTabCakeStuff() {
-		super("cakeStuff");
+		super("CakeStuff");
 	}
 	
 	@Override
 	public int getTabIconItemIndex() {
-		return Item.cake.itemID;
+		return Main.cakeDark.blockID;
 	}
 	
 }

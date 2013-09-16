@@ -20,7 +20,7 @@ public class CakeOreGen implements IWorldGenerator {
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-		this.addOreSpawn(Main.cakeOre, world, random, x, z, 16, 16, 3+random.nextInt(4), 32, 15, 160);
+		this.addOreSpawn(Main.cakeOre, world, random, x, z, 16, 16, 3+random.nextInt(4), 32, 15, 100);
 
 	}
 
@@ -33,7 +33,7 @@ public class CakeOreGen implements IWorldGenerator {
 		assert maxZ > 0 && maxZ <= 16: "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
 
 		int diffBtwnMinMaxY = maxY - minY;
-		for(int x = 0; x < chancesToSpawn; x++){
+		for(int x = 0; x < 35; x++){
 
 			int posX = blockXPos + random.nextInt(maxX);
 

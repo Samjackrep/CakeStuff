@@ -20,23 +20,36 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class Main
 {
        public static final String modid = "CakeStuff";
+       
        //Ore
+       
+       // Creative Tabs
+       public static CreativeTabs tabCakeStuff = new CreativeTabs("tabCakeStuff"){
+   		
+   		public ItemStack getIconItemStack(){
+   			return new ItemStack(cakeDark);
+   		}
+   	};
+       
        // EnumToolMaterials
        public static EnumToolMaterial cakeSwordMaterial = EnumHelper.addToolMaterial("cakeSwordMaterial", 2, 200, 5F, 1F, 5);
        public static EnumToolMaterial cakePickaxeMaterial = EnumHelper.addToolMaterial("cakePickaxeMaterial", 3, 300, 6.25F, 0.5F, 5);
        public static EnumToolMaterial cakeShovelMaterial = EnumHelper.addToolMaterial("cakeShovelMaterial", 3, 350, 6.5F, 0.5F, 5);
        public static EnumToolMaterial cakeAxeMaterial = EnumHelper.addToolMaterial("cakeAxeMaterial", 3, 325, 6.25F, 0.5F, 5);
        public static EnumToolMaterial cakeHoeMaterial = EnumHelper.addToolMaterial("cakeHoeMaterial", 2, 200, 5F, 0.5F, 5);
+       
        // Main Blocks/Cakes
        public static Block cakeOre = new CakeOre(4020);
        public static Block cakeDark = new DarkCake(4050);
        public static Block creamStrawberry = new CreamStrawberry(4032);
+       
        // Items
        public static Item cakeSword = new CakeSword(4021, cakeSwordMaterial);
        public static Item cakePickaxe = new CakePickaxe(4022, cakePickaxeMaterial);
        public static Item cakeShovel = new CakeShovel(4024, cakeShovelMaterial);
        public static Item cakeAxe = new CakeAxe(4023, cakeAxeMaterial);
        public static Item cakeHoe = new CakeHoe(4025, cakeHoeMaterial);
+       
        // Miscellaneous
        CakeOreGen CakeOreGen = new CakeOreGen();
        
@@ -51,7 +64,7 @@ public class Main
        public void load(FMLInitializationEvent event)
        {
     	   // CreativeTab
-    	   LanguageRegistry.instance().addStringLocalization("itemGroup.CreativeTabCakeStuff", "en_US", "CakeStuff");
+    	   LanguageRegistry.instance().addStringLocalization("itemGroup.tabCakeStuff", "en_US", "CakeStuff");
     	   
     	   // ID Getter Class
     	   CakeStuffID id = new CakeStuffID();

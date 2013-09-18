@@ -20,7 +20,7 @@ public class CakeSword extends ItemSword {
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeSword");
 		this.func_111206_d("cakestuff:cake_sword");
-		this.setCreativeTab(new CreativeTabCakeStuff());
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {

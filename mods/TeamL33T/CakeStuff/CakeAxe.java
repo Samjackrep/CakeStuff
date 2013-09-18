@@ -19,7 +19,7 @@ public class CakeAxe extends ItemAxe {
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeAxe");
 		this.func_111206_d("cakestuff:cake_axe");
-		this.setCreativeTab(new CreativeTabCakeStuff());
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	
 }

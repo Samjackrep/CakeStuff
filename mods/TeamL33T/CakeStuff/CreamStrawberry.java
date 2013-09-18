@@ -15,7 +15,7 @@ public class CreamStrawberry extends Block {
 		super(par1, Material.rock);
 		this.setUnlocalizedName("creamStrawberry");
 		this.setStepSound(Block.soundSnowFootstep);
-		this.setCreativeTab(new CreativeTabCakeStuff());
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	
 	@Override

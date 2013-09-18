@@ -11,7 +11,7 @@ public class CakeHoe extends ItemHoe {
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeHoe");
 		this.func_111206_d("cakestuff:cake_hoe");
-		this.setCreativeTab(new CreativeTabCakeStuff());
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	
 }

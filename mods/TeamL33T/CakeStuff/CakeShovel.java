@@ -10,7 +10,7 @@ public class CakeShovel extends ItemSpade {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeShovel");
-		this.func_111206_d("cakestuff:cake_shovel");
+		this.setTextureName("cakestuff:cake_shovel");
 		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	

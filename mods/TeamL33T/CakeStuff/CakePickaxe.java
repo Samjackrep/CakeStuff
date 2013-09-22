@@ -15,7 +15,7 @@ public class CakePickaxe extends ItemPickaxe {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakePickaxe");
-		this.func_111206_d("cakestuff:cake_pickaxe");
+		this.setTextureName("cakestuff:cake_pickaxe");
 		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	

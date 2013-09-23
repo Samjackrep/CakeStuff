@@ -1,18 +1,20 @@
 package CakeStuff.mods.TeamL33T.CakeStuff;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class DarkCake extends Block
 {
@@ -125,7 +127,7 @@ public class DarkCake extends Block
         if (par5EntityPlayer.canEat(false))
         {
             par5EntityPlayer.getFoodStats().setFoodLevel(20);
-            par5EntityPlayer.setHealth(20);
+            par5EntityPlayer.setEntityHealth(20);
             int l = par1World.getBlockMetadata(par2, par3, par4) + 1;
 
             if (l >= 6)

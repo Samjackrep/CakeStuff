@@ -19,7 +19,7 @@ public class CakeSword extends ItemSword {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeSword");
-		this.setTextureName("cakestuff:cake_sword");
+		this.func_111206_d("cakestuff:cake_sword");
 		this.setCreativeTab(Main.tabCakeStuff);
 	}
 

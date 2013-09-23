@@ -10,7 +10,7 @@ public class CakeHoe extends ItemHoe {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeHoe");
-		this.setTextureName("cakestuff:cake_hoe");
+		this.func_111206_d("cakestuff:cake_hoe");
 		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	

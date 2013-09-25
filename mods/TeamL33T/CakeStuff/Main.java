@@ -2,6 +2,7 @@ package CakeStuff.mods.TeamL33T.CakeStuff;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -91,6 +93,11 @@ public class Main
     	   LanguageRegistry.addName(cakeHoe, "Cake Hoe");
     	   LanguageRegistry.addName(cakeDark, "Dark Cake");
     	   LanguageRegistry.addName(creamStrawberry, "Strawberry Cream");
+    	   
+    	   //Cake Mob
+    	   EntityRegistry.registerGlobalEntityID(CakeMobEntity.class, "Cake Monster", 1);
+    	   EntityRegistry.addSpawn(CakeMobEntity.class, 10, 2, 4, EnumCreatureType.monster);
+    	   registerEntityEgg(CakeMobEntity.class, 0xfffffff, 0xE238EC);
     	   
     	   // Register Recipes
     	   ItemStack cake = new ItemStack(Item.cake);

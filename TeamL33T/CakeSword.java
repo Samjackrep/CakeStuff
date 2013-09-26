@@ -1,4 +1,4 @@
-package cakestuff.teaml33t;
+package CakeStuff.TeamL33T;
 
 import paulscode.sound.SoundSystem;
 import cpw.mods.fml.common.Mod.EventHandler;

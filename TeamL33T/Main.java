@@ -1,4 +1,4 @@
-package cakestuff.teaml33t;
+package CakeStuff.TeamL33T;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

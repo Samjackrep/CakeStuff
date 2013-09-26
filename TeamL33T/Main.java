@@ -1,7 +1,10 @@
-package CakeStuff.mods.TeamL33T.CakeStuff;
+package cakestuff.teaml33t;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
@@ -55,6 +58,21 @@ public class Main
        // Miscellaneous
        CakeOreGen CakeOreGen = new CakeOreGen();
        
+       //Cake Mob
+       public static int startEntityId = 300;
+       public static int getUniqueEntityId(){
+    	   do{
+    		   startEntityId++;
+    	   }
+    	   while(EntityList.getStringFromID(startEntityId) !=null);
+    	   return startEntityId++;
+       }
+       public static void registerEntityEgg(Class<? extends Entity> entity, int primaryColor, int secondaryColor){
+    	   int id = getUniqueEntityId();
+    	   EntityList.IDtoClassMapping.put(id, entity);
+    	   EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor)); 
+       }
+       
        @EventHandler
        public void preInit(FMLPreInitializationEvent event)
        {
@@ -97,7 +115,7 @@ public class Main
     	   //Cake Mob
     	   EntityRegistry.registerGlobalEntityID(CakeMobEntity.class, "Cake Monster", 1);
     	   EntityRegistry.addSpawn(CakeMobEntity.class, 10, 2, 4, EnumCreatureType.monster);
-    	   registerEntityEgg(CakeMobEntity.class, 0xfffffff, 0xE238EC);
+    	   registerEntityEgg(CakeMobEntity.class, 0xfffffff, 0xFF00FF);
     	   
     	   // Register Recipes
     	   ItemStack cake = new ItemStack(Item.cake);

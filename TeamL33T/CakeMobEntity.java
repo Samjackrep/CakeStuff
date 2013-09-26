@@ -1,4 +1,4 @@
-package CakeStuff.mods.TeamL33T.CakeStuff;
+package cakestuff.teaml33t;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;

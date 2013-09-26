@@ -1,4 +1,4 @@
-package CakeStuff.mods.TeamL33T.CakeStuff;
+package cakestuff.teaml33t;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -127,7 +127,7 @@ public class DarkCake extends Block
         if (par5EntityPlayer.canEat(false))
         {
             par5EntityPlayer.getFoodStats().setFoodLevel(20);
-            par5EntityPlayer.setEntityHealth(20);
+            par5EntityPlayer.setHealth(20);
             int l = par1World.getBlockMetadata(par2, par3, par4) + 1;
 
             if (l >= 6)

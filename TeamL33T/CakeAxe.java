@@ -1,4 +1,4 @@
-package CakeStuff.mods.TeamL33T.CakeStuff;
+package cakestuff.teaml33t;
 
 import java.util.Random;
 
@@ -18,7 +18,7 @@ public class CakeAxe extends ItemAxe {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeAxe");
-		this.func_111206_d("cakestuff:cake_axe");
+		this.func_111206_d("cakestuff:cake_axe.png");
 		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	

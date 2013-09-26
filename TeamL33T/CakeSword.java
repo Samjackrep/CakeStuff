@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.TeamL33T;
 
 import paulscode.sound.SoundSystem;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -20,6 +20,7 @@ public class CakeSword extends ItemSword {
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeSword");
 		this.func_111206_d("cakestuff:cake_sword");
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {

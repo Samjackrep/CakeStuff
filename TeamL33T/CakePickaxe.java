@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.TeamL33T;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,9 +14,9 @@ public class CakePickaxe extends ItemPickaxe {
 	public CakePickaxe(int par1, EnumToolMaterial par2EnumToolMaterial) {
 		super(par1, par2EnumToolMaterial);
 		this.setMaxStackSize(1);
-		this.setCreativeTab(CreativeTabs.tabTools);
 		this.setUnlocalizedName("cakePickaxe");
 		this.func_111206_d("cakestuff:cake_pickaxe");
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	
 	public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player) {

@@ -1,4 +1,4 @@
-package mods.TeamL33T.CakeStuff;
+package CakeStuff.TeamL33T;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
@@ -8,10 +8,10 @@ public class CakeHoe extends ItemHoe {
 
 	public CakeHoe(int par1, EnumToolMaterial par2EnumToolMaterial) {
 		super(par1, par2EnumToolMaterial);
-		this.setCreativeTab(CreativeTabs.tabTools);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("cakeHoe");
 		this.func_111206_d("cakestuff:cake_hoe");
+		this.setCreativeTab(Main.tabCakeStuff);
 	}
 	
 }
